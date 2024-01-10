@@ -8,7 +8,7 @@ with open('Bookclubmembers.txt') as file:
     book_club_members = [line.strip() for line in file]
 print(book_club_members)
 
-#defining a looped, decision function for a tailored welcome message depending on the attendees
+#defining a decision function for a tailored welcome message depending on the attendees
 def welcome_message(member_name, kieran_attending, orla_attending):
     if member_name in ['Lindsay', 'Reachbha', 'Martha']:
         return f"Welcome {member_name}. Would you like a glass of red?"
@@ -23,6 +23,7 @@ def welcome_message(member_name, kieran_attending, orla_attending):
 kieran_attending = False
 orla_attending = True
 
+#create a loop
 for member in book_club_members:
     message = welcome_message(member, kieran_attending, orla_attending)
     if message is not None:
